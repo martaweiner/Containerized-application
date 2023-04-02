@@ -1,0 +1,20 @@
+.container {
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 25px;
+}
+
+table {
+  opacity: 0;
+  transition: 0.4s all;
+}
+
+table.loaded {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}

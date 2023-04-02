@@ -1,0 +1,20 @@
+version: '3'
+services:
+  backend:
+    build: "./backend/."
+    ports:
+      - "8080:8080"
+    networks:
+      - project-network
+  frontend:
+    build: "./frontend/."
+    tty: true
+    volumes:
+        - ./frontend:/app
+    ports:
+      - "3000:3000"
+    networks:
+      - project-network
+networks:
+  project-network:
+    driver: bridge
